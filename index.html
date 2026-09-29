@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <title>HBD Ranche! ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+    <!-- =================================
+         BACKGROUND
+    ================================== -->
+
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+
+    <canvas id="fx"></canvas>
+
+
+    <!-- =================================
+         ENVELOPE
+    ================================== -->
+
+    <div id="gate">
+
+        <div class="gate-wrap">
+
+            <div class="gate-kicker">
+                A private little birthday surprise
+            </div>
+
+
+            <div
+                class="envelope"
+                id="envelope"
+                role="button"
+                tabindex="0"
+                aria-label="Open your birthday surprise"
+            >
+
+                <div class="env-back"></div>
+
+                <div class="env-flap"></div>
+
+                <div class="seal">
+                    ❤️
+                </div>
+
+                <div class="env-front"></div>
+
+            </div>
+
+
+            <div class="gate-hint">
+                Tap the envelope to open it ✨
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             BIRTHDAY GREETING
+        ================================== -->
+
+        <section
+            id="welcome"
+            class="screen"
+        >
+
+            <div class="eyebrow">
+                A tiny secret, made just for you
+            </div>
+
+
+            <h1 class="title">
+                Hi, Ranch! HAPPY BIRTHDAY!!!
+            </h1>
+
+
+            <p class="subtitle">
+                There is something waiting behind
+                this little button.
+                Take your time.
+                This was made with you in mind.
+            </p>
+
+
+            <button
+                class="btn"
+                id="open"
+            >
+                Open your surprise ✨
+            </button>
+
+
+            <p class="tiny">
+                Best experienced when you wear your smile.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             PAGES 1–6
+        ================================== -->
+
+        <section
+            id="letterScreen"
+            class="screen hidden"
+        >
+
+            <div class="card">
+
+
+                <div
+                    class="eyebrow"
+                    id="chapterEyebrow"
+                >
+                    Page 1 of 6
+                </div>
+
+
+                <h2 id="chapterTitle">
+                    A LITTLE SOMETHING FOR YOU ❤️
+                </h2>
+
+
+                <!-- PAGE INDICATORS -->
+
+                <div
+                    class="chapter-dots"
+                    id="chapterDots"
+                >
+
+                    <span class="dot active"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress">
+
+                    <div
+                        class="bar"
+                        id="bar"
+                    ></div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="letter"
+                    id="letter"
+                ></div>
+
+
+                <!-- SIGNATURE -->
+
+                <div
+                    class="signature"
+                    id="signature"
+                >
+                    — From someone who is very grateful for you.
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <div class="choice">
+
+                    <button
+                        class="btn"
+                        id="next"
+                    >
+                        Continue →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             CLOSING
+        ================================== -->
+
+        <section
+            id="closingScreen"
+            class="screen hidden"
+        >
+
+            <div class="card">
+
+                <div class="eyebrow">
+                    The last page
+                </div>
+
+
+                <div class="final">
+                    One last thing. ❤️
+                </div>
+
+
+                <p class="subtitle">
+                    Please always remember this:
+                </p>
+
+
+                <p class="closing">
+
+                    <strong>
+                        In reaching your dreams,
+                        you are never denied,
+                        only redirected.
+                    </strong>
+
+                </p>
+
+
+                <p class="subtitle">
+                    Happy Birthday, Ranch. 🎂
+                </p>
+
+
+                <button
+                    class="btn"
+                    id="replay"
+                >
+                    Read it again ↻
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
