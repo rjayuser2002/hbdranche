@@ -102,7 +102,7 @@
 
 
             <h1 class="title">
-                Hi, Ranch! HAPPY BIRTHDAY!!!
+                Hey, Birthday Boy.
             </h1>
 
 
@@ -123,7 +123,8 @@
 
 
             <p class="tiny">
-                Best experienced when you wear your smile.
+                Best experienced with the sound on —
+                but it works beautifully either way.
             </p>
 
         </section>
@@ -163,15 +164,10 @@
                 >
 
                     <span class="dot active"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
-
                     <span class="dot"></span>
 
                 </div>
@@ -235,7 +231,7 @@
             class="screen hidden"
         >
 
-            <div class="card">
+            <div class="card closing-card">
 
                 <div class="eyebrow">
                     The last page
@@ -265,14 +261,315 @@
 
                 <p class="subtitle">
                     Happy Birthday, Ranch. 🎂
+                    <br>
+                    Message from R Jay Rubio ❤️
                 </p>
 
 
+                <!-- =================================
+                     FINAL BUTTONS
+                ================================== -->
+
+                <div class="final-actions">
+
+                    <button
+                        class="btn"
+                        id="memoriesButton"
+                    >
+                        📸 Memories
+                    </button>
+
+
+                    <button
+                        class="btn music-open-btn"
+                        id="musicButton"
+                    >
+                        🎵 Our Music
+                    </button>
+
+
+                    <button
+                        class="btn secondary-btn"
+                        id="replay"
+                    >
+                        Read it again ↻
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MEMORIES
+        ================================== -->
+
+        <section
+            id="memoriesScreen"
+            class="screen hidden"
+        >
+
+            <div class="memory-card">
+
                 <button
-                    class="btn"
-                    id="replay"
+                    class="back-button"
+                    id="memoryBack"
                 >
-                    Read it again ↻
+                    ← Back
+                </button>
+
+
+                <div class="eyebrow">
+                    Little pieces of us
+                </div>
+
+
+                <h2 class="section-title">
+                    Our Memories 📸
+                </h2>
+
+
+                <p class="section-subtitle">
+                    Some moments are too good to stay
+                    buried in a camera roll.
+                </p>
+
+
+                <!-- PORTRAIT PHOTOS -->
+
+                <div class="gallery-heading">
+
+                    <span>
+                        Portraits
+                    </span>
+
+                    <span class="gallery-line"></span>
+
+                    <span>
+                        8 memories
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="memory-grid portrait-grid"
+                    id="portraitGrid"
+                ></div>
+
+
+
+                <!-- LANDSCAPE PHOTOS -->
+
+                <div class="gallery-heading landscape-heading">
+
+                    <span>
+                        Little Adventures
+                    </span>
+
+                    <span class="gallery-line"></span>
+
+                    <span>
+                        6 memories
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="memory-grid landscape-grid"
+                    id="landscapeGrid"
+                ></div>
+
+
+                <button
+                    class="btn gallery-bottom-button"
+                    id="memoryBackBottom"
+                >
+                    Back to the last page ❤️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MUSIC
+        ================================== -->
+
+        <section
+            id="musicScreen"
+            class="screen hidden"
+        >
+
+            <div class="music-card">
+
+                <button
+                    class="back-button"
+                    id="musicBack"
+                >
+                    ← Back
+                </button>
+
+
+                <div class="eyebrow">
+                    Songs that remind me of us
+                </div>
+
+
+                <h2 class="section-title">
+                    Our Music 🎵
+                </h2>
+
+
+                <p class="section-subtitle">
+                    Three songs. Three little pieces
+                    of our friendship.
+                </p>
+
+
+                <!-- MAIN PLAYER -->
+
+                <div class="player">
+
+                    <div
+                        class="album-wrap"
+                        id="albumWrap"
+                    >
+
+                        <img
+                            id="albumArt"
+                            src="assets/music/cover1.jpg"
+                            alt="Album artwork"
+                        >
+
+                        <div class="playing-ring"></div>
+
+                    </div>
+
+
+                    <div class="track-info">
+
+                        <div
+                            class="now-playing"
+                            id="nowPlaying"
+                        >
+                            NOW PLAYING
+                        </div>
+
+
+                        <h3 id="trackTitle">
+                            Music 1
+                        </h3>
+
+
+                        <p id="trackArtist">
+                            A song that reminds me of us
+                        </p>
+
+                    </div>
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="music-progress-wrap">
+
+                        <span id="currentTime">
+                            0:00
+                        </span>
+
+
+                        <input
+                            type="range"
+                            id="musicProgress"
+                            min="0"
+                            max="100"
+                            value="0"
+                            step="0.1"
+                        >
+
+
+                        <span id="duration">
+                            0:00
+                        </span>
+
+                    </div>
+
+
+                    <!-- CONTROLS -->
+
+                    <div class="player-controls">
+
+                        <button
+                            class="player-btn"
+                            id="previousTrack"
+                            aria-label="Previous song"
+                        >
+                            ⏮
+                        </button>
+
+
+                        <button
+                            class="play-main"
+                            id="playPause"
+                            aria-label="Play"
+                        >
+                            ▶
+                        </button>
+
+
+                        <button
+                            class="player-btn"
+                            id="nextTrack"
+                            aria-label="Next song"
+                        >
+                            ⏭
+                        </button>
+
+                    </div>
+
+
+                    <!-- VOLUME -->
+
+                    <div class="volume-control">
+
+                        <span>
+                            🔊
+                        </span>
+
+                        <input
+                            type="range"
+                            id="volume"
+                            min="0"
+                            max="1"
+                            value=".8"
+                            step=".01"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SONG LIST -->
+
+                <div
+                    class="song-list"
+                    id="songList"
+                ></div>
+
+
+                <button
+                    class="btn gallery-bottom-button"
+                    id="musicBackBottom"
+                >
+                    Back to the last page ❤️
                 </button>
 
             </div>
@@ -280,6 +577,75 @@
         </section>
 
     </main>
+
+
+
+    <!-- =================================
+         IMAGE LIGHTBOX
+    ================================== -->
+
+    <div
+        id="lightbox"
+        class="lightbox hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Photo viewer"
+    >
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close photo"
+        >
+            ×
+        </button>
+
+
+        <button
+            class="lightbox-nav lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous photo"
+        >
+            ‹
+        </button>
+
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Memory"
+            >
+
+            <div
+                class="lightbox-caption"
+                id="lightboxCaption"
+            ></div>
+
+        </div>
+
+
+        <button
+            class="lightbox-nav lightbox-next"
+            id="lightboxNext"
+            aria-label="Next photo"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         AUDIO
+    ================================== -->
+
+    <audio
+        id="audioPlayer"
+        preload="metadata"
+    ></audio>
+
 
 </div>
 
