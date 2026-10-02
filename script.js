@@ -4,10 +4,6 @@
 
 const pages = [
 
-    /* =====================================
-       PAGE 1
-    ====================================== */
-
     {
         title: "A LITTLE SOMETHING FOR YOU ❤️",
 
@@ -21,10 +17,6 @@ I have three things to say to you: Thank You, I am Sorry, and Please...`
     },
 
 
-    /* =====================================
-       PAGE 2
-    ====================================== */
-
     {
         title: "THANK YOU ❤️",
 
@@ -35,10 +27,6 @@ Thank you for being the kind of friend who makes ordinary days a little better. 
 I can still remember those dark times that I experienced, when you were there, ready to listen and comfort me with the words I needed to hear. You were such an angel for lending me your ear, and I truly appreciate that.`
     },
 
-
-    /* =====================================
-       PAGE 3
-    ====================================== */
 
     {
         title: "I AM SORRY. 💗",
@@ -55,10 +43,6 @@ Fritz is a good friend of mine, and so are you. I just hope that you will heal f
     },
 
 
-    /* =====================================
-       PAGE 4
-    ====================================== */
-
     {
         title: "PLEASE. 🌷",
 
@@ -70,10 +54,6 @@ So please, take care of your heart. Take care of your soul. And take care of you
     },
 
 
-    /* =====================================
-       PAGE 5
-    ====================================== */
-
     {
         title: "HAPPY BIRTHDAY, RANCH. 🎂",
 
@@ -84,10 +64,6 @@ Whatever this next year brings, I hope there are plenty of reasons for you to la
 You deserve all the good things this life has to offer, and I hope this next chapter gives you many reasons to smile.`
     },
 
-
-    /* =====================================
-       PAGE 6
-    ====================================== */
 
     {
         title: "AND FINALLY… 🔋",
@@ -102,6 +78,100 @@ I couldn’t make this message any longer. 😂`
 ];
 
 
+
+/* =========================================
+   MEMORIES
+========================================= */
+
+const portraitPhotos = [
+
+    "port1",
+    "port2",
+    "port3",
+    "port4",
+    "port5",
+    "port6",
+    "port7",
+    "port8"
+
+];
+
+
+const landscapePhotos = [
+
+    "land1",
+    "land2",
+    "land3",
+    "land4",
+    "land5",
+    "land6"
+
+];
+
+
+const allPhotos = [
+
+    ...portraitPhotos,
+    ...landscapePhotos
+
+];
+
+
+
+/*
+ * Change the extension here if your
+ * photos are PNG / WEBP instead of JPG.
+ */
+
+const IMAGE_EXTENSION = "jpg";
+
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+/*
+ * IMPORTANT:
+ *
+ * Replace these filenames with your
+ * actual music and album-art filenames.
+ *
+ * Example:
+ *
+ * music: "perfect.mp3"
+ * cover: "perfect.jpg"
+ */
+
+const musicTracks = [
+
+    {
+        title: "Minsan - Eraserheads",
+        artist: "A song that reminds me of us",
+        music: "music1.mp3",
+        cover: "cover1.jpg"
+    },
+
+
+    {
+        title: "Count on Me - Bruno Mars",
+        artist: "Another piece of our friendship",
+        music: "music2.mp3",
+        cover: "cover2.jpg"
+    },
+
+
+    {
+        title: "Saranggola - Ben&Ben",
+        artist: "One more song for the memories",
+        music: "music3.mp3",
+        cover: "cover3.jpg"
+    }
+
+];
+
+
+
 /* =========================================
    STATE
 ========================================= */
@@ -109,6 +179,11 @@ I couldn’t make this message any longer. 😂`
 let page = 0;
 
 let typingTimer = null;
+
+let currentPhoto = 0;
+
+let currentTrack = 0;
+
 
 
 /* =========================================
@@ -129,6 +204,12 @@ const letterScreen =
 
 const closingScreen =
     document.querySelector("#closingScreen");
+
+const memoriesScreen =
+    document.querySelector("#memoriesScreen");
+
+const musicScreen =
+    document.querySelector("#musicScreen");
 
 const letter =
     document.querySelector("#letter");
@@ -154,10 +235,17 @@ const openButton =
 const replayButton =
     document.querySelector("#replay");
 
+const memoriesButton =
+    document.querySelector("#memoriesButton");
+
+const musicButton =
+    document.querySelector("#musicButton");
+
 const dots =
     [
         ...document.querySelectorAll(".dot")
     ];
+
 
 
 /* =========================================
@@ -194,10 +282,6 @@ envelope.addEventListener(
 );
 
 
-/* =========================================
-   KEYBOARD SUPPORT
-========================================= */
-
 envelope.addEventListener(
     "keydown",
     event => {
@@ -217,16 +301,12 @@ envelope.addEventListener(
 );
 
 
+
 /* =========================================
    TYPEWRITER
 ========================================= */
 
 function typeText() {
-
-    /*
-     * Stop previous typewriter
-     * if the user clicks quickly.
-     */
 
     if (typingTimer) {
 
@@ -243,25 +323,13 @@ function typeText() {
         pages[page];
 
 
-    /*
-     * Title
-     */
-
     chapterTitle.textContent =
         current.title;
 
 
-    /*
-     * Page number
-     */
-
     chapterEyebrow.textContent =
         `Page ${page + 1} of 6`;
 
-
-    /*
-     * Update dots
-     */
 
     dots.forEach(
         (dot, index) => {
@@ -275,20 +343,10 @@ function typeText() {
     );
 
 
-    /*
-     * Clear text
-     */
-
     letter.textContent = "";
 
+    bar.style.width = "0%";
 
-    bar.style.width =
-        "0%";
-
-
-    /*
-     * Signature
-     */
 
     if (page === 0) {
 
@@ -311,10 +369,6 @@ function typeText() {
 
     }
 
-
-    /*
-     * Typewriter
-     */
 
     let i = 0;
 
@@ -365,6 +419,7 @@ function typeText() {
 }
 
 
+
 /* =========================================
    OPEN BIRTHDAY MESSAGE
 ========================================= */
@@ -404,6 +459,7 @@ openButton.addEventListener(
 );
 
 
+
 /* =========================================
    NEXT PAGE
 ========================================= */
@@ -411,20 +467,6 @@ openButton.addEventListener(
 nextButton.addEventListener(
     "click",
     () => {
-
-        /*
-         * Pages 1–6
-         *
-         * Array index:
-         *
-         * 0 = Introduction
-         * 1 = Thank You
-         * 2 = Sorry
-         * 3 = Please
-         * 4 = Birthday
-         * 5 = Power Bank
-         */
-
 
         if (page < 5) {
 
@@ -447,14 +489,7 @@ nextButton.addEventListener(
 
         }
 
-
         else {
-
-            /*
-             * Page 6 finished.
-             *
-             * Show the final closing.
-             */
 
             letterScreen.classList.add(
                 "hidden"
@@ -481,6 +516,7 @@ nextButton.addEventListener(
 
     }
 );
+
 
 
 /* =========================================
@@ -522,18 +558,1128 @@ replayButton.addEventListener(
 );
 
 
+
+/* =========================================
+   SCREEN SWITCHING
+========================================= */
+
+function showClosing() {
+
+    memoriesScreen.classList.add(
+        "hidden"
+    );
+
+    musicScreen.classList.add(
+        "hidden"
+    );
+
+    closingScreen.classList.remove(
+        "hidden"
+    );
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+function showMemories() {
+
+    closingScreen.classList.add(
+        "hidden"
+    );
+
+    musicScreen.classList.add(
+        "hidden"
+    );
+
+    memoriesScreen.classList.remove(
+        "hidden"
+    );
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+    animateGallery();
+
+    burst(30);
+
+}
+
+
+function showMusic() {
+
+    closingScreen.classList.add(
+        "hidden"
+    );
+
+    memoriesScreen.classList.add(
+        "hidden"
+    );
+
+    musicScreen.classList.remove(
+        "hidden"
+    );
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+    burst(30);
+
+}
+
+
+
+memoriesButton.addEventListener(
+    "click",
+    showMemories
+);
+
+
+musicButton.addEventListener(
+    "click",
+    showMusic
+);
+
+
+
+/* =========================================
+   MEMORY GALLERY
+========================================= */
+
+const portraitGrid =
+    document.querySelector(
+        "#portraitGrid"
+    );
+
+
+const landscapeGrid =
+    document.querySelector(
+        "#landscapeGrid"
+    );
+
+
+function createMemory(
+    filename,
+    index
+) {
+
+    const button =
+        document.createElement(
+            "button"
+        );
+
+
+    button.className =
+        "memory";
+
+
+    button.style.animationDelay =
+        `${index * 70}ms`;
+
+
+    const image =
+        document.createElement(
+            "img"
+        );
+
+
+    image.src =
+        `assets/images/${filename}.${IMAGE_EXTENSION}`;
+
+
+    image.alt =
+        `Memory ${index + 1}`;
+
+
+    image.loading =
+        "lazy";
+
+
+    button.appendChild(
+        image
+    );
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            currentPhoto =
+                allPhotos.indexOf(
+                    filename
+                );
+
+            openLightbox();
+
+        }
+    );
+
+
+    return button;
+
+}
+
+
+
+function buildGallery() {
+
+    portraitGrid.innerHTML =
+        "";
+
+    landscapeGrid.innerHTML =
+        "";
+
+
+    portraitPhotos.forEach(
+        (filename, index) => {
+
+            portraitGrid.appendChild(
+                createMemory(
+                    filename,
+                    index
+                )
+            );
+
+        }
+    );
+
+
+    landscapePhotos.forEach(
+        (filename, index) => {
+
+            landscapeGrid.appendChild(
+                createMemory(
+                    filename,
+                    index + portraitPhotos.length
+                )
+            );
+
+        }
+    );
+
+}
+
+
+buildGallery();
+
+
+
+/* =========================================
+   GALLERY ANIMATION
+========================================= */
+
+function animateGallery() {
+
+    const memories =
+        document.querySelectorAll(
+            ".memory"
+        );
+
+
+    memories.forEach(
+        (memory, index) => {
+
+            memory.style.animation =
+                "none";
+
+
+            void memory.offsetWidth;
+
+
+            memory.style.animation =
+                `photoAppear .65s ease ${index * 45}ms both`;
+
+        }
+    );
+
+}
+
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+const lightbox =
+    document.querySelector(
+        "#lightbox"
+    );
+
+
+const lightboxImage =
+    document.querySelector(
+        "#lightboxImage"
+    );
+
+
+const lightboxCaption =
+    document.querySelector(
+        "#lightboxCaption"
+    );
+
+
+const lightboxClose =
+    document.querySelector(
+        "#lightboxClose"
+    );
+
+
+const lightboxPrev =
+    document.querySelector(
+        "#lightboxPrev"
+    );
+
+
+const lightboxNext =
+    document.querySelector(
+        "#lightboxNext"
+    );
+
+
+
+function openLightbox() {
+
+    updateLightbox();
+
+
+    lightbox.classList.remove(
+        "hidden"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeLightbox() {
+
+    lightbox.classList.add(
+        "hidden"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+function updateLightbox() {
+
+    const filename =
+        allPhotos[currentPhoto];
+
+
+    lightboxImage.src =
+        `assets/images/${filename}.${IMAGE_EXTENSION}`;
+
+
+    lightboxImage.alt =
+        `Memory ${currentPhoto + 1} of ${allPhotos.length}`;
+
+
+    lightboxCaption.textContent =
+        `Memory ${currentPhoto + 1} of ${allPhotos.length}`;
+
+}
+
+
+function previousPhoto() {
+
+    currentPhoto--;
+
+    if (
+        currentPhoto < 0
+    ) {
+
+        currentPhoto =
+            allPhotos.length - 1;
+
+    }
+
+
+    updateLightbox();
+
+}
+
+
+function nextPhoto() {
+
+    currentPhoto++;
+
+    if (
+        currentPhoto >=
+        allPhotos.length
+    ) {
+
+        currentPhoto = 0;
+
+    }
+
+
+    updateLightbox();
+
+}
+
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+lightboxPrev.addEventListener(
+    "click",
+    previousPhoto
+);
+
+
+lightboxNext.addEventListener(
+    "click",
+    nextPhoto
+);
+
+
+lightbox.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            lightbox
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            lightbox.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeLightbox();
+
+        }
+
+
+        if (
+            event.key ===
+            "ArrowLeft"
+        ) {
+
+            previousPhoto();
+
+        }
+
+
+        if (
+            event.key ===
+            "ArrowRight"
+        ) {
+
+            nextPhoto();
+
+        }
+
+    }
+);
+
+
+
+/* =========================================
+   MEMORY BACK BUTTONS
+========================================= */
+
+document.querySelector(
+    "#memoryBack"
+).addEventListener(
+    "click",
+    showClosing
+);
+
+
+document.querySelector(
+    "#memoryBackBottom"
+).addEventListener(
+    "click",
+    showClosing
+);
+
+
+
+/* =========================================
+   MUSIC PLAYER
+========================================= */
+
+const audioPlayer =
+    document.querySelector(
+        "#audioPlayer"
+    );
+
+
+const albumArt =
+    document.querySelector(
+        "#albumArt"
+    );
+
+
+const albumWrap =
+    document.querySelector(
+        "#albumWrap"
+    );
+
+
+const player =
+    document.querySelector(
+        ".player"
+    );
+
+
+const trackTitle =
+    document.querySelector(
+        "#trackTitle"
+    );
+
+
+const trackArtist =
+    document.querySelector(
+        "#trackArtist"
+    );
+
+
+const nowPlaying =
+    document.querySelector(
+        "#nowPlaying"
+    );
+
+
+const playPause =
+    document.querySelector(
+        "#playPause"
+    );
+
+
+const previousTrack =
+    document.querySelector(
+        "#previousTrack"
+    );
+
+
+const nextTrack =
+    document.querySelector(
+        "#nextTrack"
+    );
+
+
+const musicProgress =
+    document.querySelector(
+        "#musicProgress"
+    );
+
+
+const currentTime =
+    document.querySelector(
+        "#currentTime"
+    );
+
+
+const duration =
+    document.querySelector(
+        "#duration"
+    );
+
+
+const volume =
+    document.querySelector(
+        "#volume"
+    );
+
+
+const songList =
+    document.querySelector(
+        "#songList"
+    );
+
+
+
+function formatTime(
+    seconds
+) {
+
+    if (
+        !Number.isFinite(seconds)
+    ) {
+
+        return "0:00";
+
+    }
+
+
+    const minutes =
+        Math.floor(
+            seconds / 60
+        );
+
+
+    const secs =
+        Math.floor(
+            seconds % 60
+        );
+
+
+    return (
+        `${minutes}:` +
+        `${secs.toString().padStart(2,"0")}`
+    );
+
+}
+
+
+
+/* =========================================
+   BUILD SONG LIST
+========================================= */
+
+function buildSongList() {
+
+    songList.innerHTML =
+        "";
+
+
+    musicTracks.forEach(
+        (track,index) => {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "song-item";
+
+
+            item.dataset.index =
+                index;
+
+
+            item.innerHTML = `
+
+                <img
+                    src="assets/music/${track.cover}"
+                    alt="${track.title}"
+                >
+
+                <div class="song-details">
+
+                    <strong>
+                        ${track.title}
+                    </strong>
+
+                    <span>
+                        ${track.artist}
+                    </span>
+
+                </div>
+
+                <div class="song-number">
+                    ${index + 1}
+                </div>
+
+            `;
+
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    loadTrack(
+                        index,
+                        true
+                    );
+
+                }
+            );
+
+
+            songList.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+
+buildSongList();
+
+
+
+/* =========================================
+   LOAD TRACK
+========================================= */
+
+function loadTrack(
+    index,
+    autoPlay = false
+) {
+
+    currentTrack =
+        index;
+
+
+    const track =
+        musicTracks[currentTrack];
+
+
+    audioPlayer.src =
+        `assets/music/${track.music}`;
+
+
+    albumArt.src =
+        `assets/music/${track.cover}`;
+
+
+    albumArt.alt =
+        track.title;
+
+
+    trackTitle.textContent =
+        track.title;
+
+
+    trackArtist.textContent =
+        track.artist;
+
+
+    musicProgress.value =
+        0;
+
+
+    currentTime.textContent =
+        "0:00";
+
+
+    duration.textContent =
+        "0:00";
+
+
+    updateSongList();
+
+
+    if (autoPlay) {
+
+        playMusic();
+
+    }
+
+}
+
+
+
+/* =========================================
+   SONG LIST ACTIVE STATE
+========================================= */
+
+function updateSongList() {
+
+    const items =
+        document.querySelectorAll(
+            ".song-item"
+        );
+
+
+    items.forEach(
+        (item,index) => {
+
+            item.classList.toggle(
+                "active",
+                index === currentTrack
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================
+   PLAY / PAUSE
+========================================= */
+
+function playMusic() {
+
+    audioPlayer.play()
+        .then(
+            () => {
+
+                player.classList.add(
+                    "playing"
+                );
+
+                playPause.textContent =
+                    "❚❚";
+
+                playPause.setAttribute(
+                    "aria-label",
+                    "Pause"
+                );
+
+                nowPlaying.textContent =
+                    "NOW PLAYING";
+
+            }
+        )
+        .catch(
+            error => {
+
+                console.log(
+                    "Playback requires user interaction:",
+                    error
+                );
+
+            }
+        );
+
+}
+
+
+function pauseMusic() {
+
+    audioPlayer.pause();
+
+
+    player.classList.remove(
+        "playing"
+    );
+
+
+    playPause.textContent =
+        "▶";
+
+
+    playPause.setAttribute(
+        "aria-label",
+        "Play"
+    );
+
+
+    nowPlaying.textContent =
+        "PAUSED";
+
+}
+
+
+function toggleMusic() {
+
+    if (
+        audioPlayer.paused
+    ) {
+
+        playMusic();
+
+    }
+
+    else {
+
+        pauseMusic();
+
+    }
+
+}
+
+
+playPause.addEventListener(
+    "click",
+    toggleMusic
+);
+
+
+
+/* =========================================
+   PREVIOUS / NEXT TRACK
+========================================= */
+
+previousTrack.addEventListener(
+    "click",
+    () => {
+
+        currentTrack--;
+
+        if (
+            currentTrack < 0
+        ) {
+
+            currentTrack =
+                musicTracks.length - 1;
+
+        }
+
+
+        loadTrack(
+            currentTrack,
+            true
+        );
+
+    }
+);
+
+
+nextTrack.addEventListener(
+    "click",
+    () => {
+
+        currentTrack++;
+
+        if (
+            currentTrack >=
+            musicTracks.length
+        ) {
+
+            currentTrack = 0;
+
+        }
+
+
+        loadTrack(
+            currentTrack,
+            true
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   AUDIO EVENTS
+========================================= */
+
+audioPlayer.addEventListener(
+    "loadedmetadata",
+    () => {
+
+        duration.textContent =
+            formatTime(
+                audioPlayer.duration
+            );
+
+    }
+);
+
+
+audioPlayer.addEventListener(
+    "timeupdate",
+    () => {
+
+        if (
+            !audioPlayer.duration
+        ) {
+
+            return;
+
+        }
+
+
+        musicProgress.value =
+            (
+                audioPlayer.currentTime /
+                audioPlayer.duration
+            ) * 100;
+
+
+        currentTime.textContent =
+            formatTime(
+                audioPlayer.currentTime
+            );
+
+    }
+);
+
+
+audioPlayer.addEventListener(
+    "ended",
+    () => {
+
+        currentTrack++;
+
+        if (
+            currentTrack >=
+            musicTracks.length
+        ) {
+
+            currentTrack = 0;
+
+        }
+
+
+        loadTrack(
+            currentTrack,
+            true
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   SEEK
+========================================= */
+
+musicProgress.addEventListener(
+    "input",
+    () => {
+
+        if (
+            !audioPlayer.duration
+        ) {
+
+            return;
+
+        }
+
+
+        audioPlayer.currentTime =
+            (
+                musicProgress.value /
+                100
+            ) *
+            audioPlayer.duration;
+
+    }
+);
+
+
+
+/* =========================================
+   VOLUME
+========================================= */
+
+audioPlayer.volume =
+    Number(
+        volume.value
+    );
+
+
+volume.addEventListener(
+    "input",
+    () => {
+
+        audioPlayer.volume =
+            Number(
+                volume.value
+            );
+
+    }
+);
+
+
+
+/* =========================================
+   MUSIC BACK BUTTONS
+========================================= */
+
+document.querySelector(
+    "#musicBack"
+).addEventListener(
+    "click",
+    () => {
+
+        pauseMusic();
+
+        showClosing();
+
+    }
+);
+
+
+document.querySelector(
+    "#musicBackBottom"
+).addEventListener(
+    "click",
+    () => {
+
+        pauseMusic();
+
+        showClosing();
+
+    }
+);
+
+
+
+/* =========================================
+   INITIAL TRACK
+========================================= */
+
+loadTrack(
+    0,
+    false
+);
+
+
+
 /* =========================================
    CONFETTI
 ========================================= */
 
 const canvas =
-    document.querySelector("#fx");
+    document.querySelector(
+        "#fx"
+    );
+
 
 const ctx =
-    canvas.getContext("2d");
+    canvas.getContext(
+        "2d"
+    );
 
 
 let pieces = [];
+
 
 
 /* =========================================
@@ -547,11 +1693,13 @@ function resizeCanvas() {
 
 
     canvas.width =
-        window.innerWidth * ratio;
+        window.innerWidth *
+        ratio;
 
 
     canvas.height =
-        window.innerHeight * ratio;
+        window.innerHeight *
+        ratio;
 
 
     ctx.setTransform(
@@ -575,6 +1723,7 @@ window.addEventListener(
 
 
 resizeCanvas();
+
 
 
 /* =========================================
@@ -620,6 +1769,7 @@ function burst(
     }
 
 }
+
 
 
 /* =========================================
