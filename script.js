@@ -1,7 +1,3 @@
-/* =========================================
-   BIRTHDAY PAGES
-========================================= */
-
 const pages = [
 
     {
@@ -77,12 +73,6 @@ I couldn’t make this message any longer. 😂`
 
 ];
 
-
-
-/* =========================================
-   MEMORIES
-========================================= */
-
 const portraitPhotos = [
 
     "port1",
@@ -116,32 +106,7 @@ const allPhotos = [
 
 ];
 
-
-
-/*
- * Change the extension here if your
- * photos are PNG / WEBP instead of JPG.
- */
-
 const IMAGE_EXTENSION = "jpg";
-
-
-
-/* =========================================
-   MUSIC
-========================================= */
-
-/*
- * IMPORTANT:
- *
- * Replace these filenames with your
- * actual music and album-art filenames.
- *
- * Example:
- *
- * music: "perfect.mp3"
- * cover: "perfect.jpg"
- */
 
 const musicTracks = [
 
@@ -170,12 +135,6 @@ const musicTracks = [
 
 ];
 
-
-
-/* =========================================
-   STATE
-========================================= */
-
 let page = 0;
 
 let typingTimer = null;
@@ -183,12 +142,6 @@ let typingTimer = null;
 let currentPhoto = 0;
 
 let currentTrack = 0;
-
-
-
-/* =========================================
-   DOM ELEMENTS
-========================================= */
 
 const gate =
     document.querySelector("#gate");
@@ -246,12 +199,6 @@ const dots =
         ...document.querySelectorAll(".dot")
     ];
 
-
-
-/* =========================================
-   ENVELOPE
-========================================= */
-
 function openEnvelope() {
 
     envelope.classList.add(
@@ -299,12 +246,6 @@ envelope.addEventListener(
 
     }
 );
-
-
-
-/* =========================================
-   TYPEWRITER
-========================================= */
 
 function typeText() {
 
@@ -419,11 +360,6 @@ function typeText() {
 }
 
 
-
-/* =========================================
-   OPEN BIRTHDAY MESSAGE
-========================================= */
-
 openButton.addEventListener(
     "click",
     () => {
@@ -457,12 +393,6 @@ openButton.addEventListener(
 
     }
 );
-
-
-
-/* =========================================
-   NEXT PAGE
-========================================= */
 
 nextButton.addEventListener(
     "click",
@@ -517,12 +447,6 @@ nextButton.addEventListener(
     }
 );
 
-
-
-/* =========================================
-   REPLAY
-========================================= */
-
 replayButton.addEventListener(
     "click",
     () => {
@@ -557,11 +481,6 @@ replayButton.addEventListener(
     }
 );
 
-
-
-/* =========================================
-   SCREEN SWITCHING
-========================================= */
 
 function showClosing() {
 
@@ -655,12 +574,6 @@ musicButton.addEventListener(
     "click",
     showMusic
 );
-
-
-
-/* =========================================
-   MEMORY GALLERY
-========================================= */
 
 const portraitGrid =
     document.querySelector(
@@ -778,12 +691,6 @@ function buildGallery() {
 
 buildGallery();
 
-
-
-/* =========================================
-   GALLERY ANIMATION
-========================================= */
-
 function animateGallery() {
 
     const memories =
@@ -809,12 +716,6 @@ function animateGallery() {
     );
 
 }
-
-
-
-/* =========================================
-   LIGHTBOX
-========================================= */
 
 const lightbox =
     document.querySelector(
@@ -1024,12 +925,6 @@ document.addEventListener(
     }
 );
 
-
-
-/* =========================================
-   MEMORY BACK BUTTONS
-========================================= */
-
 document.querySelector(
     "#memoryBack"
 ).addEventListener(
@@ -1044,12 +939,6 @@ document.querySelector(
     "click",
     showClosing
 );
-
-
-
-/* =========================================
-   MUSIC PLAYER
-========================================= */
 
 const audioPlayer =
     document.querySelector(
@@ -1174,12 +1063,6 @@ function formatTime(
 
 }
 
-
-
-/* =========================================
-   BUILD SONG LIST
-========================================= */
-
 function buildSongList() {
 
     songList.innerHTML =
@@ -1254,12 +1137,6 @@ function buildSongList() {
 
 buildSongList();
 
-
-
-/* =========================================
-   LOAD TRACK
-========================================= */
-
 function loadTrack(
     index,
     autoPlay = false
@@ -1316,12 +1193,6 @@ function loadTrack(
 
 }
 
-
-
-/* =========================================
-   SONG LIST ACTIVE STATE
-========================================= */
-
 function updateSongList() {
 
     const items =
@@ -1342,12 +1213,6 @@ function updateSongList() {
     );
 
 }
-
-
-
-/* =========================================
-   PLAY / PAUSE
-========================================= */
 
 function playMusic() {
 
@@ -1436,12 +1301,6 @@ playPause.addEventListener(
     toggleMusic
 );
 
-
-
-/* =========================================
-   PREVIOUS / NEXT TRACK
-========================================= */
-
 previousTrack.addEventListener(
     "click",
     () => {
@@ -1491,11 +1350,6 @@ nextTrack.addEventListener(
     }
 );
 
-
-
-/* =========================================
-   AUDIO EVENTS
-========================================= */
 
 audioPlayer.addEventListener(
     "loadedmetadata",
@@ -1564,11 +1418,6 @@ audioPlayer.addEventListener(
 );
 
 
-
-/* =========================================
-   SEEK
-========================================= */
-
 musicProgress.addEventListener(
     "input",
     () => {
@@ -1592,12 +1441,6 @@ musicProgress.addEventListener(
     }
 );
 
-
-
-/* =========================================
-   VOLUME
-========================================= */
-
 audioPlayer.volume =
     Number(
         volume.value
@@ -1615,12 +1458,6 @@ volume.addEventListener(
 
     }
 );
-
-
-
-/* =========================================
-   MUSIC BACK BUTTONS
-========================================= */
 
 document.querySelector(
     "#musicBack"
@@ -1649,22 +1486,10 @@ document.querySelector(
     }
 );
 
-
-
-/* =========================================
-   INITIAL TRACK
-========================================= */
-
 loadTrack(
     0,
     false
 );
-
-
-
-/* =========================================
-   CONFETTI
-========================================= */
 
 const canvas =
     document.querySelector(
@@ -1680,11 +1505,6 @@ const ctx =
 
 let pieces = [];
 
-
-
-/* =========================================
-   CANVAS RESIZE
-========================================= */
 
 function resizeCanvas() {
 
@@ -1723,12 +1543,6 @@ window.addEventListener(
 
 
 resizeCanvas();
-
-
-
-/* =========================================
-   CONFETTI BURST
-========================================= */
 
 function burst(
     amount = 55
@@ -1770,11 +1584,6 @@ function burst(
 
 }
 
-
-
-/* =========================================
-   CONFETTI ANIMATION
-========================================= */
 
 function animateConfetti() {
 
