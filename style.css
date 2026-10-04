@@ -68,9 +68,9 @@ body {
 
     z-index: 1;
 
-    width: min(760px, 85vw);
+    width: min(1000px, 110vw);
 
-    height: min(760px, 85vh);
+    height: min(1000px, 100vh);
 
     left: 50%;
 
