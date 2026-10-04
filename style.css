@@ -62,6 +62,76 @@ body {
 
 }
 
+.bg-photo {
+
+    position: fixed;
+
+    z-index: 1;
+
+    width: min(760px, 85vw);
+
+    height: min(760px, 85vh);
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background-image:
+        url("assets/images/bgimage.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        contain;
+
+    opacity:
+        .10;
+
+    pointer-events:
+        none;
+
+    filter:
+        saturate(.8)
+        brightness(1.05);
+
+    mix-blend-mode:
+        screen;
+
+    animation:
+        backgroundPhotoFloat
+        12s ease-in-out infinite;
+
+}
+
+
+@keyframes backgroundPhotoFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -51%)
+            scale(1.025);
+
+    }
+
+}
+
 canvas {
 
     position: fixed;
@@ -2212,6 +2282,19 @@ input[type="range"] {
 
         padding:
             18px 14px;
+
+    }
+
+        .bg-photo {
+
+        width:
+            105vw;
+
+        height:
+            75vh;
+
+        opacity:
+            .075;
 
     }
 
