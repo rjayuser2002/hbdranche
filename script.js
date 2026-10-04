@@ -27,7 +27,7 @@ I can still remember those dark times that I experienced, when you were there, r
     {
         title: "I AM SORRY. 💗",
 
-        text: `I admit, I am not a perfect friend, nor a perfect “kuya” to you and to all our friends from Willumsen Boarding House. I am sorry that I crossed the line—for telling you how I feel about you.
+        text: `I am SORRY. I admit, I am not a perfect friend, nor a perfect “kuya” to you and to all our friends from Willumsen Boarding House. I am sorry that I crossed the line—for telling you how I feel about you.
 
 I do not regret any of it, but somehow, I wish I hadn’t done it back then because I didn’t want to lose you as my friend.
 
@@ -42,7 +42,7 @@ Fritz is a good friend of mine, and so are you. I just hope that you will heal f
     {
         title: "PLEASE. 🌷",
 
-        text: `Please take care of yourself.
+        text: `PLEASE, please take care of yourself.
 
 You deserve all the good things this life has to offer because I know you are a good person. I wish you could see yourself through my eyes and feel yourself through my heart so that you would know how much you matter to everyone around you.
 
