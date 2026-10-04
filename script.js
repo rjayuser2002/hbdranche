@@ -25,7 +25,7 @@ I can still remember those dark times that I experienced, when you were there, r
 
 
     {
-        title: "I AM SORRY. 💗",
+        title: "I AM SORRY. ❤️‍🩹",
 
         text: `I am SORRY. I admit, I am not a perfect friend, nor a perfect “kuya” to you and to all our friends from Willumsen Boarding House. I am sorry that I crossed the line—for telling you how I feel about you.
 
