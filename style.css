@@ -92,7 +92,7 @@ body {
         contain;
 
     opacity:
-        .10;
+        .15;
 
     pointer-events:
         none;
@@ -2294,7 +2294,7 @@ input[type="range"] {
             75vh;
 
         opacity:
-            .075;
+            .13;
 
     }
 
