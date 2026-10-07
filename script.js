@@ -133,13 +133,13 @@ const memoryCaptions = [
     "This was the very first time I wanted to join you guys for dinner. I always turned down every meal invitation you gave me, but this was the day I decided to step out of my comfort zone and try to make friends with everyone.",
 
     // Landscape 1
-    "Lorem ipsum",
+    "We took a groufie to test out my laptop's camera. I think this was during my second week at DOH NIR CHD",
 
     // Landscape 2
-    "Lorem ipsum",
+    "Yohoo! We watched Spider-Man: Brand New Day and took this photo together. After all the struggles, you finally managed to get our tickets yourself! I'd love to watch another movie with you again soon.",
 
     // Landscape 3
-    "Lorem ipsum",
+    "I asked you for a favor-to come with me to look for and canvass laptops for my work, and we ended up grabbing some lunch together.",
 
     // Landscape 4
     "Lorem ipsum",
