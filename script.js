@@ -112,7 +112,7 @@ const memoryCaptions = [
     "I think this was our first photo together, just the two of us, since we always have group photos. This was the day I was moving out of Willumsen Boarding House, and you were the only one willing to spend the day with me. I can't blame the others, though, since I came unannounced.",
 
     // Portrait 2
-    "Lorem ipsum",
+    "This photo, too. I had so much fun with you that day. I was a bit surprised to find out you're into photobooths. I was like, 'Whoa, I did not see that coming!'",
 
     // Portrait 3
     "Lorem ipsum",
