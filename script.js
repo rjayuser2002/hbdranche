@@ -145,10 +145,10 @@ const memoryCaptions = [
     "The very latest photo of us together. We grabbed some dinner at Mr. Sizzlers and talked about how our September went. By the way, I'm sorry to hear about what happened. Just know that I'm always all ears whenever you need someone to talk to.",
 
     // Landscape 5
-    "Lorem ipsum",
+    "Another dinner out at Cheesestick Country! Jeremy went home to Siquijor, and neither of us wanted to cook anyway. HAHA!",
 
     // Landscape 6
-    "Lorem ipsum"
+    "After Kawa, Valencia, we went straight to the shores of Dauin. What a busy day we had! As long as the blackout continued, the adventure just kept getting more intense."
 
 ];
 
