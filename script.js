@@ -109,7 +109,7 @@ const allPhotos = [
 const memoryCaptions = [
 
     // Portrait 1
-    "Lorem ipsum",
+    "I think this was our first photo together, just the two of us, since we always have group photos. This was the day I was moving out of Willumsen Boarding House, and you were the only one willing to spend the day with me. I can't blame the others, though, since I came unannounced.",
 
     // Portrait 2
     "Lorem ipsum",
