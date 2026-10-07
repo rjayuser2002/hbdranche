@@ -121,7 +121,7 @@ const memoryCaptions = [
     "We took these silly close-up photos, and this was your entry when we were in Kawa, Valencia, trying to cool off from the hot weather and beat the boredom caused by the citywide blackout.",
 
     // Portrait 5
-    "Lorem ipsum",
+    "Another group photo from our dinner at Inasal Gid. This was taken on Carl's birthday.",
 
     // Portrait 6
     "Lorem ipsum",
