@@ -124,7 +124,7 @@ const memoryCaptions = [
     "Another group photo from our dinner at Inasal Gid. This was taken on Carl's birthday.",
 
     // Portrait 6
-    "Lorem ipsum",
+    "One very random 'I'm too lazy to cook' moment from our Queen Chef, Jeremy. So we all decided to have dinner at Mr. Sizzlers instead.",
 
     // Portrait 7
     "Lorem ipsum",
