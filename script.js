@@ -115,10 +115,10 @@ const memoryCaptions = [
     "This photo, too. I had so much fun with you that day. I was a bit surprised to find out you're into photobooths. I was like, 'Whoa, I did not see that coming!'",
 
     // Portrait 3
-    "Lorem ipsum",
+    "I can't really remember the details of this day, but what I do remember is that you, Carl, and I were bored at the BH and didn't want to go to sleep yet, so we went out for burgers and milktea. That was also the day I almost lost my sling bag. Clumsy me!",
 
     // Portrait 4
-    "Lorem ipsum",
+    "We took these silly close-up photos, and this was your entry when we were in Kawa, Valencia, trying to cool off from the hot weather and beat the boredom caused by the citywide blackout.",
 
     // Portrait 5
     "Lorem ipsum",
