@@ -106,6 +106,52 @@ const allPhotos = [
 
 ];
 
+const memoryCaptions = [
+
+    // Portrait 1
+    "Lorem ipsum",
+
+    // Portrait 2
+    "Lorem ipsum",
+
+    // Portrait 3
+    "Lorem ipsum",
+
+    // Portrait 4
+    "Lorem ipsum",
+
+    // Portrait 5
+    "Lorem ipsum",
+
+    // Portrait 6
+    "Lorem ipsum",
+
+    // Portrait 7
+    "Lorem ipsum",
+
+    // Portrait 8
+    "Lorem ipsum",
+
+    // Landscape 1
+    "Lorem ipsum",
+
+    // Landscape 2
+    "Lorem ipsum",
+
+    // Landscape 3
+    "Lorem ipsum",
+
+    // Landscape 4
+    "Lorem ipsum",
+
+    // Landscape 5
+    "Lorem ipsum",
+
+    // Landscape 6
+    "Lorem ipsum"
+
+];
+
 const IMAGE_EXTENSION = "jpg";
 
 const musicTracks = [
@@ -798,7 +844,7 @@ function updateLightbox() {
 
 
     lightboxCaption.textContent =
-        `Memory ${currentPhoto + 1} of ${allPhotos.length}`;
+        memoryCaptions[currentPhoto];
 
 }
 
