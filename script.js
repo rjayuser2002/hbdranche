@@ -127,10 +127,10 @@ const memoryCaptions = [
     "One very random 'I'm too lazy to cook' moment from our Queen Chef, Jeremy. So we all decided to have dinner at Mr. Sizzlers instead.",
 
     // Portrait 7
-    "Lorem ipsum",
+    "This photo was taken the night before Carl's birthday. How heartwarming it is to have all of us together in one frame. Well, not ALL of us, since Princess and the others weren't there. But still, it's a moment worth remembering.",
 
     // Portrait 8
-    "Lorem ipsum",
+    "This was the very first time I wanted to join you guys for dinner. I always turned down every meal invitation you gave me, but this was the day I decided to step out of my comfort zone and try to make friends with everyone.",
 
     // Landscape 1
     "Lorem ipsum",
