@@ -139,7 +139,7 @@ const memoryCaptions = [
     "Yohoo! We watched Spider-Man: Brand New Day and took this photo together. After all the struggles, you finally managed to get our tickets yourself! I'd love to watch another movie with you again soon.",
 
     // Landscape 3
-    "I asked you for a favor-to come with me to look for and canvass laptops for my work, and we ended up grabbing some lunch together.",
+    "I asked you for a favor—to come with me to look for and canvass laptops for my work, and we ended up grabbing some lunch together.",
 
     // Landscape 4
     "The very latest photo of us together. We grabbed some dinner at Mr. Sizzlers and talked about how our September went. By the way, I'm sorry to hear about what happened. Just know that I'm always all ears whenever you need someone to talk to.",
