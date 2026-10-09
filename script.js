@@ -83,7 +83,13 @@ const portraitPhotos = [
     "port6",
     "port7",
     "port8",
-    "port9"
+    "port9",
+    "port10",
+    "port11",
+    "port12",
+    "port13",
+    "port14",
+    "port15"
 
 ];
 
@@ -99,7 +105,8 @@ const landscapePhotos = [
     "land3",
     "land4",
     "land5",
-    "land6"
+    "land6",
+    "land7"
 
 ];
 
