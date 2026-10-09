@@ -925,6 +925,7 @@ function previousPhoto() {
     updateLightbox();
 }
 
+
 function nextPhoto() {
     currentPhoto =
         currentPhoto < 0 ||
@@ -934,12 +935,6 @@ function nextPhoto() {
 
     updateLightbox();
 }
-
-
-    updateLightbox();
-
-}
-
 
 
 lightboxClose.addEventListener(
