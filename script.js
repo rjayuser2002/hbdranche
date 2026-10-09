@@ -130,32 +130,35 @@ const memoryCaptions = [
 
     // Portrait 6
     "One very random 'I'm too lazy to cook' moment from our Queen Chef, Jeremy. So we all decided to have dinner at Mr. Sizzlers instead.",
-
+    
     // Portrait 7
-    "This photo was taken the night before Carl's birthday. How heartwarming it is to have all of us together in one frame. Well, not ALL of us, since Princess and the others weren't there. But still, it's a moment worth remembering.",
+    "Tada! Cravings satisfied? Maybe? The most common comment I heard after eating here was that the food was too salty. HAHA!",
 
     // Portrait 8
-    "This was the very first time I wanted to join you guys for dinner. I always turned down every meal invitation you gave me, but this was the day I decided to step out of my comfort zone and try to make friends with everyone.",
+    "This photo was taken the night before Carl's birthday. How heartwarming it is to have all of us together in one frame. Well, not ALL of us, since Princess and the others weren't there. But still, it's a moment worth remembering.",
 
     // Portrait 9
+    "This was the very first time I wanted to join you guys for dinner. I always turned down every meal invitation you gave me, but this was the day I decided to step out of my comfort zone and try to make friends with everyone.",
+
+    // Landscape 1
     "On a random Thursday, I messaged you on Messenger for a spontaneous 'laag' at Robinsons Place, just to check out the new extension. Glad we ended up eating samgyupsal. 재밌었어, 진구야!",
     
-    // Landscape 1
+    // Landscape 2
     "We took a groufie to test out my laptop's camera. I think this was during my second week at DOH NIR CHD",
 
-    // Landscape 2
+    // Landscape 3
     "Yohoo! We watched Spider-Man: Brand New Day and took this photo together. After all the struggles, you finally managed to get our tickets yourself! I'd love to watch another movie with you again soon.",
 
-    // Landscape 3
+    // Landscape 4
     "I asked you for a favor—to come with me to look for and canvass laptops for my work, and we ended up grabbing some lunch together.",
 
-    // Landscape 4
+    // Landscape 5
     "The very latest photo of us together. We grabbed some dinner at Mr. Sizzlers and talked about how our September went. By the way, I'm sorry to hear about what happened. Just know that I'm always all ears whenever you need someone to talk to.",
 
-    // Landscape 5
+    // Landscape 6
     "Another dinner out at Cheesestick Country! Jeremy went home to Siquijor, and neither of us wanted to cook anyway. HAHA!",
 
-    // Landscape 6
+    // Landscape 7
     "After Kawa, Valencia, we went straight to the shores of Dauin. What a busy day we had! As long as the blackout continued, the adventure just kept getting more intense."
 
 ];
