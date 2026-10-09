@@ -89,7 +89,7 @@ const portraitPhotos = [
 
 const portraitVideo = {
     filename: "vid1.mp4",
-    message: `Put your personal message here. ❤️`
+    message: `How cute of you to 'mukbang' the lettuce during our spontaneous samgyupsal night! Cheers to more spontaneous adventures with you!`
 };
 
 const landscapePhotos = [
