@@ -2660,3 +2660,17 @@ input[type="range"] {
 #lightboxImage.hidden {
     display: none !important;
 }
+
+.lightbox-nav {
+    z-index: 10;
+}
+
+#lightboxVideo {
+    position: relative;
+    z-index: 1;
+}
+
+#lightboxVideo.hidden,
+#lightboxImage.hidden {
+    display: none !important;
+}
