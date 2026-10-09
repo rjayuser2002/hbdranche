@@ -2652,3 +2652,11 @@ input[type="range"] {
         border-radius: 10px;
     }
 }
+
+#lightboxVideo.hidden {
+    display: none !important;
+}
+
+#lightboxImage.hidden {
+    display: none !important;
+}
