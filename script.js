@@ -895,6 +895,17 @@ function closeLightbox() {
 
 function updateLightbox() {
 
+       
+    if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.classList.add("hidden");
+        lightboxVideo.removeAttribute("src");
+        lightboxVideo.load();
+    }
+    
+ 
+    lightboxImage.classList.remove("hidden");
+
     const filename =
         allPhotos[currentPhoto];
 
