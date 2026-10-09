@@ -707,7 +707,8 @@ function createVideoMemory() {
     container.className = "memory memory-video-card";
 
     const video = document.createElement("video");
-    video.controls = true;
+    video.controls = false;
+    video.style.cursor = "pointer";
     video.playsInline = true;
     video.preload = "metadata";
     video.setAttribute("aria-label", "A special birthday memory");
@@ -724,6 +725,11 @@ function createVideoMemory() {
 
     container.appendChild(video);
     container.appendChild(message);
+
+    video.addEventListener("click", openVideoLightbox);
+
+    message.style.cursor = "pointer";
+    message.addEventListener("click", openVideoLightbox);
 
     return container;
 }
@@ -844,6 +850,9 @@ const lightboxNext =
 
 function openLightbox() {
 
+    lightboxImage.classList.remove("hidden");
+    lightboxVideo.classList.add("hidden");
+
     updateLightbox();
 
 
@@ -857,17 +866,30 @@ function openLightbox() {
 
 }
 
+function openVideoLightbox() {
+    // Hide the photo and show the video
+    lightboxImage.classList.add("hidden");
+    lightboxVideo.classList.remove("hidden");
+
+    // Load the video and its message
+    lightboxVideo.src = `assets/video/${portraitVideo.filename}`;
+    lightboxVideo.load();
+
+    lightboxCaption.textContent = portraitVideo.message;
+
+    // Open the lightbox
+    lightbox.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+}
+
 
 function closeLightbox() {
+    lightboxVideo.pause();
+    lightboxVideo.classList.add("hidden");
+    lightboxImage.classList.remove("hidden");
 
-    lightbox.classList.add(
-        "hidden"
-    );
-
-
-    document.body.style.overflow =
-        "";
-
+    lightbox.classList.add("hidden");
+    document.body.style.overflow = "";
 }
 
 
