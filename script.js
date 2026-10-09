@@ -133,6 +133,9 @@ const memoryCaptions = [
     // Portrait 8
     "This was the very first time I wanted to join you guys for dinner. I always turned down every meal invitation you gave me, but this was the day I decided to step out of my comfort zone and try to make friends with everyone.",
 
+    // Portrait 9
+    "On a random Thursday, I messaged you on Messenger for a spontaneous 'laag' at Robinsons Place, just to check out the new extension. Glad we ended up eating samgyupsal. 재밌었어, 진구야!",
+    
     // Landscape 1
     "We took a groufie to test out my laptop's camera. I think this was during my second week at DOH NIR CHD",
 
