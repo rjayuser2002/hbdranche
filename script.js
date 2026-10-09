@@ -140,27 +140,44 @@ const memoryCaptions = [
     // Portrait 9
     "This was the very first time I wanted to join you guys for dinner. I always turned down every meal invitation you gave me, but this was the day I decided to step out of my comfort zone and try to make friends with everyone.",
 
-    // Landscape 1
+    // Portrait 10
     "On a random Thursday, I messaged you on Messenger for a spontaneous 'laag' at Robinsons Place, just to check out the new extension. Glad we ended up eating samgyupsal. 재밌었어, 진구야!",
+
+    //Portrait 11
+    "This group photo was taken as a keepsafe for Maverick after he decided to move out of Willumsen Boarding House",
+
+    //Portrait 12
+    "When I was unemployed and staying in Siquijor, you guys would always take photos and send them to me whenever I randomly sent you money for food. Truly, my love language is food.",
+
+    //Portrait 13
+    "After getting employed, I made sure to always treasure you guys and visit from time to time. This time, I invited you and Princess to grab something to eat at Bazinga. Just another expression of my love language: food.",
+
+    //Portrait 14
+    "It was Carlo Oralde's birthday, and he invited everyone to dinner at Mang Inasal. We didn't get to talk much that night because I was overwhelmed by all the new faces I had to meet and smile at.",
+
+    //Portrait 15
+    "Whenever I'm in Siquijor, I always wonder what you guys are up to. So, once again, I express my love for you through food. This time, you guys decided to eat out at Jollibee.",
     
-    // Landscape 2
+    // Landscape 1
     "We took a groufie to test out my laptop's camera. I think this was during my second week at DOH NIR CHD",
 
-    // Landscape 3
+    // Landscape 2
     "Yohoo! We watched Spider-Man: Brand New Day and took this photo together. After all the struggles, you finally managed to get our tickets yourself! I'd love to watch another movie with you again soon.",
 
-    // Landscape 4
+    // Landscape 3
     "I asked you for a favor—to come with me to look for and canvass laptops for my work, and we ended up grabbing some lunch together.",
 
-    // Landscape 5
+    // Landscape 4
     "The very latest photo of us together. We grabbed some dinner at Mr. Sizzlers and talked about how our September went. By the way, I'm sorry to hear about what happened. Just know that I'm always all ears whenever you need someone to talk to.",
 
-    // Landscape 6
+    // Landscape 5
     "Another dinner out at Cheesestick Country! Jeremy went home to Siquijor, and neither of us wanted to cook anyway. HAHA!",
 
-    // Landscape 7
-    "After Kawa, Valencia, we went straight to the shores of Dauin. What a busy day we had! As long as the blackout continued, the adventure just kept getting more intense."
+    // Landscape 6
+    "After Kawa, Valencia, we went straight to the shores of Dauin. What a busy day we had! As long as the blackout continued, the adventure just kept getting more intense.",
 
+    //Landscape 7
+    "You guys took a groufie out of nowhere and sent it to me, and of course, I saved it as a memory. So, here it is now."
 ];
 
 const IMAGE_EXTENSION = "jpg";
