@@ -867,17 +867,19 @@ function openLightbox() {
 }
 
 function openVideoLightbox() {
-    // Hide the photo and show the video
-    lightboxImage.classList.add("hidden");
-    lightboxVideo.classList.remove("hidden");
+    // Treat the video as appearing before the first photo.
+    currentPhoto = -1;
 
-    // Load the video and its message
+    // Hide the photo and display the video.
+    lightboxImage.classList.add("hidden");
+
+    lightboxVideo.pause();
     lightboxVideo.src = `assets/video/${portraitVideo.filename}`;
+    lightboxVideo.classList.remove("hidden");
     lightboxVideo.load();
 
     lightboxCaption.textContent = portraitVideo.message;
 
-    // Open the lightbox
     lightbox.classList.remove("hidden");
     document.body.style.overflow = "hidden";
 }
