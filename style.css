@@ -2580,3 +2580,75 @@ input[type="range"] {
     white-space: pre-line;
     overflow-wrap: anywhere;
 }
+
+#lightboxVideo {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    max-height: 75vh;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 14px;
+    background: #08060d;
+}
+
+#lightboxVideo.hidden {
+    display: none;
+}
+
+#lightboxImage.hidden {
+    display: none;
+}
+
+.memory-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 150px);
+    max-height: calc(100dvh - 150px);
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    background: #08060d;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+#lightboxVideo {
+    display: block;
+    width: auto;
+    height: auto;
+
+    /* Keep the entire video visible */
+    max-width: 85vw;
+    max-height: 75vh;
+    max-height: 75dvh;
+
+    object-fit: contain;
+    object-position: center;
+
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    background: #08060d;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+#lightboxVideo.hidden {
+    display: none !important;
+}
+
+#lightboxImage.hidden {
+    display: none !important;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    #lightboxVideo {
+        max-width: 88vw;
+        max-height: 70vh;
+        max-height: 70dvh;
+        border-radius: 10px;
+    }
+}
