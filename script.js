@@ -87,6 +87,10 @@ const portraitPhotos = [
 
 ];
 
+const portraitVideo = {
+    filename: "vid1.mp4",
+    message: `Put your personal message here. ❤️`
+};
 
 const landscapePhotos = [
 
@@ -698,6 +702,31 @@ function createMemory(
 
 }
 
+function createVideoMemory() {
+    const container = document.createElement("div");
+    container.className = "memory memory-video-card";
+
+    const video = document.createElement("video");
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    video.setAttribute("aria-label", "A special birthday memory");
+
+    const source = document.createElement("source");
+    source.src = `assets/video/${portraitVideo.filename}`;
+    source.type = "video/mp4";
+
+    video.appendChild(source);
+
+    const message = document.createElement("p");
+    message.className = "memory-video-caption";
+    message.textContent = portraitVideo.message;
+
+    container.appendChild(video);
+    container.appendChild(message);
+
+    return container;
+}
 
 
 function buildGallery() {
@@ -720,6 +749,10 @@ function buildGallery() {
             );
 
         }
+    );
+
+    portraitGrid.appendChild(
+    createVideoMemory()
     );
 
 
