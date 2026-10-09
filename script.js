@@ -867,10 +867,8 @@ function openLightbox() {
 }
 
 function openVideoLightbox() {
-    // Treat the video as appearing before the first photo.
     currentPhoto = -1;
 
-    // Hide the photo and display the video.
     lightboxImage.classList.add("hidden");
 
     lightboxVideo.pause();
@@ -897,66 +895,45 @@ function closeLightbox() {
 
 function updateLightbox() {
 
-       
-    if (lightboxVideo) {
-        lightboxVideo.pause();
-        lightboxVideo.classList.add("hidden");
-        lightboxVideo.removeAttribute("src");
-        lightboxVideo.load();
-    }
+    lightboxVideo.pause();
+    lightboxVideo.classList.add("hidden");
+    lightboxVideo.removeAttribute("src");
+    lightboxVideo.load();
+
     
- 
     lightboxImage.classList.remove("hidden");
 
-    const filename =
-        allPhotos[currentPhoto];
-
+    const filename = allPhotos[currentPhoto];
 
     lightboxImage.src =
         `assets/images/${filename}.${IMAGE_EXTENSION}`;
 
-
     lightboxImage.alt =
         `Memory ${currentPhoto + 1} of ${allPhotos.length}`;
 
-
     lightboxCaption.textContent =
         memoryCaptions[currentPhoto];
-
 }
 
 
 function previousPhoto() {
-
-    currentPhoto--;
-
-    if (
-        currentPhoto < 0
-    ) {
-
-        currentPhoto =
-            allPhotos.length - 1;
-
-    }
-
+    currentPhoto =
+        currentPhoto <= 0
+            ? allPhotos.length - 1
+            : currentPhoto - 1;
 
     updateLightbox();
-
 }
 
-
 function nextPhoto() {
+    currentPhoto =
+        currentPhoto < 0 ||
+        currentPhoto >= allPhotos.length - 1
+            ? 0
+            : currentPhoto + 1;
 
-    currentPhoto++;
-
-    if (
-        currentPhoto >=
-        allPhotos.length
-    ) {
-
-        currentPhoto = 0;
-
-    }
+    updateLightbox();
+}
 
 
     updateLightbox();
