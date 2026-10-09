@@ -916,26 +916,32 @@ function updateLightbox() {
 }
 
 
+
 function previousPhoto() {
-    currentPhoto =
-        currentPhoto <= 0
-            ? allPhotos.length - 1
-            : currentPhoto - 1;
+    // From the video, go to the last portrait photo.
+    if (currentPhoto === -1) {
+        currentPhoto = portraitPhotos.length - 1;
+    } else if (currentPhoto === 0) {
+        currentPhoto = allPhotos.length - 1;
+    } else {
+        currentPhoto--;
+    }
 
     updateLightbox();
 }
-
 
 function nextPhoto() {
-    currentPhoto =
-        currentPhoto < 0 ||
-        currentPhoto >= allPhotos.length - 1
-            ? 0
-            : currentPhoto + 1;
+    // From the video, go to the first landscape photo.
+    if (currentPhoto === -1) {
+        currentPhoto = portraitPhotos.length;
+    } else if (currentPhoto >= allPhotos.length - 1) {
+        currentPhoto = 0;
+    } else {
+        currentPhoto++;
+    }
 
     updateLightbox();
 }
-
 
 lightboxClose.addEventListener(
     "click",
