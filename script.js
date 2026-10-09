@@ -89,7 +89,7 @@ const portraitPhotos = [
 
 const portraitVideo = {
     filename: "vid1.mp4",
-    message: `How cute of you to 'mukbang' the lettuce`
+    message: `How cute of you to 'mukbang' the lettuce during our spontaneous samgyupsal dinner at Sodam. Looking forward to more sponty adventures with you, Ranch!`
 };
 
 const landscapePhotos = [
