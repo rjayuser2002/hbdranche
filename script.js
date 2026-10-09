@@ -811,6 +811,11 @@ const lightboxImage =
         "#lightboxImage"
     );
 
+const lightboxVideo = 
+    document.querySelector(
+        "#lightboxVideo"
+    );
+
 
 const lightboxCaption =
     document.querySelector(
