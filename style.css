@@ -2674,3 +2674,108 @@ input[type="range"] {
 #lightboxImage.hidden {
     display: none !important;
 }
+
+
+/* Full-screen loading overlay */
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center, #30203f, #120d1f 70%);
+    color: #fff9ff;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.loading-screen.finished {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.heart-loader {
+    color: #ff7db8;
+    font-size: clamp(100px, 24vw, 170px);
+    line-height: 1;
+    text-shadow: 0 0 25px #ff7db8, 0 0 65px #ff4f9a;
+    animation: heartPulse 1s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.loader-content p {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 28px 0 8px;
+}
+
+.loader-content span {
+    font-size: 0.85rem;
+    color: #d9cde0;
+}
+
+@keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+}
+
+.heart-loader.explode {
+    animation: heartExplode 0.65s ease-in forwards;
+}
+
+@keyframes heartExplode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    65% {
+        transform: scale(7);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(12);
+        opacity: 0;
+    }
+}
+
+.loader-confetti-piece {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 14px;
+    border-radius: 2px;
+    pointer-events: none;
+    animation: confettiFly 1.4s ease-out forwards;
+}
+
+@keyframes confettiFly {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            rotate(var(--rotation));
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heart-loader {
+        animation-duration: 2.5s;
+    }
+}
+
