@@ -1,9 +1,9 @@
 const pages = [
 
     {
-        title: "A LITTLE SOMETHING FOR YOU ❤️",
+        title: "A LITTLE SOMETHING FOR YOU",
 
-        text: `Happy Birthday, Ranch! Surprise!!! 🎉
+        text: `Happy Birthday, Ranch! Surprise!!! 
 
 (Sorry, long message ahead. ⚠️)
 
@@ -14,7 +14,7 @@ I have three things to say to you: Thank You, I am Sorry, and Please...`
 
 
     {
-        title: "THANK YOU ❤️",
+        title: "THANK YOU",
 
         text: `First, THANK YOU for being a genuine friend and for making such a big impact on my life. This may sound cringey, but this is the truth, and that is how I feel.
 
@@ -25,7 +25,7 @@ I can still remember those dark times that I experienced, when you were there, r
 
 
     {
-        title: "I AM SORRY. ❤️‍🩹",
+        title: "I AM SORRY.",
 
         text: `I am SORRY. I admit, I am not a perfect friend, nor a perfect “kuya” to you and to all our friends from Willumsen Boarding House. I am sorry that I crossed the line—for telling you how I feel about you.
 
@@ -40,7 +40,7 @@ Fritz is a good friend of mine, and so are you. I just hope that you will heal f
 
 
     {
-        title: "PLEASE. 🌷",
+        title: "PLEASE.",
 
         text: `PLEASE, please take care of yourself.
 
@@ -51,7 +51,7 @@ So please, take care of your heart. Take care of your soul. And take care of you
 
 
     {
-        title: "HAPPY BIRTHDAY, RANCH. 🎂",
+        title: "HAPPY BIRTHDAY, RANCH.",
 
         text: `Happy Birthday again, Ranch. I hope this message makes your day a little more special.
 
@@ -62,11 +62,11 @@ You deserve all the good things this life has to offer, and I hope this next cha
 
 
     {
-        title: "AND FINALLY… 🔋",
+        title: "AND FINALLY…",
 
         text: `And whenever your phone is dying...
 
-well, at least now you have a power bank. 😄
+well, at least now you have a power bank.
 
 I couldn’t make this message any longer. 😂`
     }
@@ -380,7 +380,7 @@ function typeText() {
     else if (page === 5) {
 
         signature.textContent =
-            "— And yes, the power bank is real. 😄";
+            "— And yes, the power bank is real.";
 
     }
 
