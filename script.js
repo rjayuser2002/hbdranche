@@ -589,20 +589,32 @@ function showClosing() {
 
 
 
-async function showMemories() {
-    closingScreen.classList.add("hidden");
-    musicScreen.classList.add("hidden");
-    memoriesScreen.classList.remove("hidden");
+function showMemories() {
+
+    closingScreen.classList.add(
+        "hidden"
+    );
+
+    musicScreen.classList.add(
+        "hidden"
+    );
+
+    memoriesScreen.classList.remove(
+        "hidden"
+    );
 
     window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
     });
 
-    await startLoadingScreen();
-    
     animateGallery();
+
     burst(30);
+
 }
 
 
@@ -1887,29 +1899,22 @@ function createLoaderConfetti() {
 
 
 async function startLoadingScreen() {
-    
-    loadingScreen.classList.remove("finished");
-    heartLoader.classList.remove("explode");
-    loaderConfetti.innerHTML = "";
 
-    void loadingScreen.offsetWidth;
-    
     await Promise.all([
-        ...allPhotos.map(filename =>
-            preloadPhoto(`${filename}.${IMAGE_EXTENSION}`)
-        ),
+        ...allPhotos.map(preloadPhoto),
         preloadVideoMetadata()
     ]);
-
-    await new Promise(resolve => setTimeout(resolve, 500));
 
     heartLoader.classList.add("explode");
     createLoaderConfetti();
 
-   
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    setTimeout(() => {
+        loadingScreen.classList.add("finished");
+    }, 1050);
 
-    loadingScreen.classList.add("finished");
+    setTimeout(() => {
+        loadingScreen.remove();
+    }, 1900);
 }
 
 
