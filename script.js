@@ -1806,3 +1806,113 @@ function animateConfetti() {
 
 
 animateConfetti();
+
+
+const loadingScreen = document.querySelector("#loadingScreen");
+const heartLoader = document.querySelector("#heartLoader");
+const loaderConfetti = document.querySelector("#loaderConfetti");
+
+function preloadPhoto(filename) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        let settled = false;
+
+        function finish() {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timeout);
+            resolve();
+        }
+
+        const timeout = setTimeout(finish, 12000);
+
+        img.onload = finish;
+        img.onerror = finish;
+        img.src = `assets/images/${filename}`;
+
+        if (img.complete) finish();
+    });
+}
+
+function preloadVideoMetadata() {
+    return new Promise((resolve) => {
+        const video = document.createElement("video");
+        let settled = false;
+
+        function finish() {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timeout);
+            video.removeAttribute("src");
+            video.load();
+            resolve();
+        }
+
+        const timeout = setTimeout(finish, 8000);
+
+        video.preload = "metadata";
+        video.muted = true;
+        video.onloadedmetadata = finish;
+        video.onerror = finish;
+        video.src = `assets/video/${portraitVideo.filename}`;
+        video.load();
+    });
+}
+
+function createLoaderConfetti() {
+    const colors = [
+        "#ff7db8",
+        "#ffc56e",
+        "#ffffff",
+        "#c5a3ff",
+        "#ff4f9a"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+        const piece = document.createElement("span");
+        piece.className = "loader-confetti-piece";
+
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.setProperty(
+            "--x",
+            `${(Math.random() - 0.5) * window.innerWidth * 1.5}px`
+        );
+
+        piece.style.setProperty(
+            "--y",
+            `${(Math.random() - 0.5) * window.innerHeight * 1.5}px`
+        );
+
+        piece.style.setProperty(
+            "--rotation",
+            `${Math.random() * 1080 - 540}deg`
+        );
+
+        piece.style.animationDelay = `${Math.random() * 0.2}s`;
+        loaderConfetti.appendChild(piece);
+    }
+}
+
+async function startLoadingScreen() {
+    
+    await Promise.all([
+        ...allPhotos.map(preloadPhoto),
+        preloadVideoMetadata()
+    ]);
+
+    heartLoader.classList.add("explode");
+    createLoaderConfetti();
+
+    setTimeout(() => {
+        loadingScreen.classList.add("finished");
+    }, 1050);
+
+    setTimeout(() => {
+        loadingScreen.remove();
+    }, 1900);
+}
+
+startLoadingScreen();
+
