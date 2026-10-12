@@ -89,7 +89,8 @@ const portraitPhotos = [
     "port12",
     "port13",
     "port14",
-    "port15"
+    "port15",
+    "port16"
 
 ];
 
@@ -164,6 +165,9 @@ const memoryCaptions = [
 
     //Portrait 15
     "Whenever I'm in Siquijor, I always wonder what you guys are up to. So, once again, I express my love for you through food. This time, you guys decided to eat out at Jollibee.",
+
+    //Portrait 16
+    "Sana all, new haircut! I had already left for my homewtown, and we had said our goodbyes, knowing we wouldn't see each other for a while since I had moved out of Willumsen Boarding House. Then, you sent me this selfie to show off your fresh haircut. What a cute surprise. I rarely receive selfies from you, and I've always figured that you're not really the selfie type of person. Or are you...?",
     
     // Landscape 1
     "We took a groufie to test out my laptop's camera. I think this was during my second week at DOH NIR CHD",
