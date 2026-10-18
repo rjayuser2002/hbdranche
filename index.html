@@ -1,28 +1,16 @@
+
 <!doctype html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, viewport-fit=cover"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#120d1f">
     <title>HBD Ranche! ❤️</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-
 <div id="loadingScreen" class="loading-screen">
     <div class="loader-content">
         <div class="heart-loader" id="heartLoader">♥</div>
@@ -33,567 +21,253 @@
 </div>
 
 <div id="app">
-    
-<div class="orb o1"></div>
-<div class="orb o2"></div>
-<div class="orb o3"></div>
-
-<div class="bg-photo" aria-hidden="true"></div>
-
-<canvas id="fx"></canvas>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="bg-photo" aria-hidden="true"></div>
+    <canvas id="fx"></canvas>
 
     <div id="gate">
-
         <div class="gate-wrap">
+            <div class="gate-kicker">A private little birthday surprise</div>
 
-            <div class="gate-kicker">
-                A private little birthday surprise
-            </div>
-
-
-            <div
-                class="envelope"
-                id="envelope"
-                role="button"
-                tabindex="0"
-                aria-label="Open your birthday surprise"
-            >
-
+            <div class="envelope" id="envelope" role="button"
+                 tabindex="0" aria-label="Open your birthday surprise">
                 <div class="env-back"></div>
-
                 <div class="env-flap"></div>
-
-                <div class="seal">
-                    ❤️
-                </div>
-
+                <div class="seal">❤️</div>
                 <div class="env-front"></div>
-
             </div>
 
-
-            <div class="gate-hint">
-                Tap the envelope to open it ✨
-            </div>
-
+            <div class="gate-hint">Tap the envelope to open it ✨</div>
         </div>
-
     </div>
 
     <main>
+        <section id="welcome" class="screen">
+            <div class="eyebrow">A tiny secret, made just for you</div>
 
-        <section
-            id="welcome"
-            class="screen"
-        >
-
-            <div class="eyebrow">
-                A tiny secret, made just for you
-            </div>
-
-
-            <h1 class="title">
-                Hi, Ranch. <br><br>
-                HAPPY <br>
-                BIRTHDAY!
-            </h1>
-
+            <h1 class="title">Hi, Ranch.<br><br>HAPPY<br>BIRTHDAY!</h1>
 
             <p class="subtitle">
-                There is something waiting behind
-                this little button.
-                Take your time.
-                This was made with you in mind.
+                There is something waiting behind this little button.
+                Take your time. This was made with you in mind.
             </p>
 
+            <button class="btn" id="open">Open your surprise</button>
 
-            <button
-                class="btn"
-                id="open"
-            >
-                Open your surprise
-            </button>
-
-
-            <p class="tiny">
-                Best experienced when you wear your smile...
-                
-            </p>
-
+            <p class="tiny">Best experienced when you wear your smile...</p>
         </section>
 
-        <section
-            id="letterScreen"
-            class="screen hidden"
-        >
-
+        <section id="letterScreen" class="screen hidden">
             <div class="card">
+                <div class="eyebrow" id="chapterEyebrow">Page 1 of 6</div>
+                <h2 id="chapterTitle">A LITTLE SOMETHING FOR YOU</h2>
 
-
-                <div
-                    class="eyebrow"
-                    id="chapterEyebrow"
-                >
-                    Page 1 of 6
-                </div>
-
-
-                <h2 id="chapterTitle">
-                    A LITTLE SOMETHING FOR YOU
-                </h2>
-
-                <div
-                    class="chapter-dots"
-                    id="chapterDots"
-                >
-
+                <div class="chapter-dots" id="chapterDots">
                     <span class="dot active"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
-
                 </div>
 
-                <div class="progress">
+                <div class="progress"><div class="bar" id="bar"></div></div>
+                <div class="letter" id="letter"></div>
 
-                    <div
-                        class="bar"
-                        id="bar"
-                    ></div>
-
-                </div>
-
-
-                <div
-                    class="letter"
-                    id="letter"
-                ></div>
-
-
-                <div
-                    class="signature"
-                    id="signature"
-                >
+                <div class="signature" id="signature">
                     — From someone who is very grateful for you.
                 </div>
 
                 <div class="choice">
-
-                    <button
-                        class="btn"
-                        id="next"
-                    >
-                        Continue →
-                    </button>
-
+                    <button class="btn" id="next">Continue →</button>
                 </div>
-
             </div>
-
         </section>
 
-        <section
-            id="closingScreen"
-            class="screen hidden"
-        >
-
+        <section id="closingScreen" class="screen hidden">
             <div class="card closing-card">
+                <div class="eyebrow">The last page</div>
+                <div class="final">One last thing.</div>
 
-                <div class="eyebrow">
-                    The last page
-                </div>
-
-
-                <div class="final">
-                    One last thing.
-                </div>
-
-
-                <p class="subtitle">
-                    Please always remember this:
-                </p>
-
+                <p class="subtitle">Please always remember this:</p>
 
                 <p class="closing">
-
-                    <strong>
-                        <i>
-                        "In reaching your dreams,
-                        you are never denied,
+                    <strong><i>
+                        "In reaching your dreams, you are never denied,
                         only redirected."
-                        </i>
-                    </strong>
-
+                    </i></strong>
                 </p>
 
-
                 <p class="subtitle">
-                    Happy Birthday, Ranch. 
-                    <br><br>
-                    Love, <br> R Jay <3
+                    Happy Birthday, Ranch.<br><br>
+                    Love,<br>R Jay &lt;3
                 </p>
 
                 <div class="final-actions">
-
-                    <button
-                        class="btn"
-                        id="memoriesButton"
-                    >
-                        📸 Memories
-                    </button>
-
-
-                    <button
-                        class="btn music-open-btn"
-                        id="musicButton"
-                    >
-                        🎵 Our Music
-                    </button>
-
-
-                    <button
-                        class="btn secondary-btn"
-                        id="replay"
-                    >
-                        Read it again ↻
-                    </button>
-
+                    <button class="btn" id="memoriesButton">📸 Memories</button>
+                    <button class="btn music-open-btn" id="musicButton">🎵 Our Music</button>
+                    <button class="btn secondary-btn" id="replay">Read it again ↻</button>
                 </div>
-
             </div>
-
         </section>
 
-        <section
-            id="memoriesScreen"
-            class="screen hidden"
-        >
-
+        
+        <section id="memoriesScreen" class="screen hidden">
             <div class="memory-card">
+                <button class="back-button" id="memoryBack">← Back</button>
 
-                <button
-                    class="back-button"
-                    id="memoryBack"
-                >
-                    ← Back
-                </button>
-
-
-                <div class="eyebrow">
-                    Little pieces of us
-                </div>
-
-
-                <h2 class="section-title">
-                    Our Memories
-                </h2>
-
+                <div class="eyebrow">Little pieces of us</div>
+                <h2 class="section-title">Our Memories</h2>
 
                 <p class="section-subtitle">
-                    Some moments are too good to stay
-                    buried in a camera roll.
+                    Some moments are too good to stay buried in a camera roll.
                 </p>
 
                 <div class="gallery-heading">
-
-                    <span>
-                        Moments to cherish
-                    </span>
-
+                    <span>Moments to cherish</span>
                     <span class="gallery-line"></span>
-
-                    <span>
-                        You and I and WBH
-                    </span>
-
+                    <span>I, You, and WBH</span>
                 </div>
 
+                <div class="carousel-shell" id="carouselShell">
+                    <button class="carousel-arrow carousel-prev"
+                            id="carouselPrev" aria-label="Previous memory">
+                        &#10094;
+                    </button>
 
-                <div
-                    class="memory-grid portrait-grid"
-                    id="portraitGrid"
-                ></div>
+                    <div class="carousel-stage" id="carouselStage"
+                         aria-label="3D memory carousel">
+                        <div class="carousel-track" id="carouselTrack"></div>
+                    </div>
 
-                <div class="gallery-heading landscape-heading">
-
-                    <span>
-                        Memories to keep
-                    </span>
-
-                    <span class="gallery-line"></span>
-
-                    <span>
-                        You and I and WBH
-                    </span>
-
+                    <button class="carousel-arrow carousel-next"
+                            id="carouselNext" aria-label="Next memory">
+                        &#10095;
+                    </button>
                 </div>
 
+                <div class="carousel-caption" aria-live="polite">
+                    <div class="carousel-counter" id="carouselCounter">01 / 24</div>
+                    <div class="carousel-item-title" id="carouselItemTitle">
+                        A memory with you
+                    </div>
+                    <p class="carousel-hint">
+                        Use the arrows or swipe to explore.
+                    </p>
+                </div>
 
-                <div
-                    class="memory-grid landscape-grid"
-                    id="landscapeGrid"
-                ></div>
-
+                <div class="carousel-controls">
+                    <button class="carousel-small-btn" id="carouselFirst">
+                        ↤ Jump to First
+                    </button>
+                    <button class="carousel-small-btn" id="carouselLast">
+                        Jump to Last ↦
+                    </button>
+                </div>
 
                 <div class="memories-message">
-                
-                    <div class="eyebrow">
-                        <b>Food for thought:</b>
-                    </div>
-                
+                    <div class="eyebrow"><b>Food for thought:</b></div>
                     <p>
-                        <i>"There are countless memories left undocumented through our camera lenses, but forever etched in the deepest parts of our hearts. After all, the greatest memories aren't always captured in photographs—they are the one's we carry with us forever".</i> 
+                        <i>"There are countless memories left undocumented through our
+                        camera lenses, but forever etched in the deepest parts of our
+                        hearts. After all, the greatest memories aren't always captured
+                        in photographs—they are the ones we carry with us forever."</i>
                     </p>
-                
                 </div>
-                
-                <button
-                    class="btn gallery-bottom-button"
-                    id="memoryBackBottom"
-                >
+
+                <button class="btn gallery-bottom-button" id="memoryBackBottom">
                     Back to the last page
                 </button>
-
             </div>
-
         </section>
 
-        <section
-            id="musicScreen"
-            class="screen hidden"
-        >
-
+        <section id="musicScreen" class="screen hidden">
             <div class="music-card">
+                <button class="back-button" id="musicBack">← Back</button>
 
-                <button
-                    class="back-button"
-                    id="musicBack"
-                >
-                    ← Back
-                </button>
-
-
-                <div class="eyebrow">
-                    Songs that remind me of us
-                </div>
-
-
-                <h2 class="section-title">
-                    Our Music
-                </h2>
-
+                <div class="eyebrow">Songs that remind me of us</div>
+                <h2 class="section-title">Our Music</h2>
 
                 <p class="section-subtitle">
-                    Three songs. Three little pieces
-                    of our friendship.
+                    Three songs. Three little pieces of our friendship.
                 </p>
 
                 <div class="player">
-
-                    <div
-                        class="album-wrap"
-                        id="albumWrap"
-                    >
-
-                        <img
-                            id="albumArt"
-                            src="assets/music/cover1.jpg"
-                            alt="Album artwork"
-                        >
-
+                    <div class="album-wrap" id="albumWrap">
+                        <img id="albumArt" src="assets/music/cover1.jpg"
+                             alt="Album artwork">
                         <div class="playing-ring"></div>
-
                     </div>
-
 
                     <div class="track-info">
-
-                        <div
-                            class="now-playing"
-                            id="nowPlaying"
-                        >
-                            NOW PLAYING
-                        </div>
-
-
-                        <h3 id="trackTitle">
-                            Music 1
-                        </h3>
-
-
-                        <p id="trackArtist">
-                            A song that reminds me of us
-                        </p>
-
+                        <div class="now-playing" id="nowPlaying">NOW PLAYING</div>
+                        <h3 id="trackTitle">Music 1</h3>
+                        <p id="trackArtist">A song that reminds me of us</p>
                     </div>
 
-
                     <div class="music-progress-wrap">
-
-                        <span id="currentTime">
-                            0:00
-                        </span>
-
-
-                        <input
-                            type="range"
-                            id="musicProgress"
-                            min="0"
-                            max="100"
-                            value="0"
-                            step="0.1"
-                        >
-
-
-                        <span id="duration">
-                            0:00
-                        </span>
-
+                        <span id="currentTime">0:00</span>
+                        <input type="range" id="musicProgress"
+                               min="0" max="100" value="0" step="0.1"
+                               aria-label="Music progress">
+                        <span id="duration">0:00</span>
                     </div>
 
                     <div class="player-controls">
-
-                        <button
-                            class="player-btn"
-                            id="previousTrack"
-                            aria-label="Previous song"
-                        >
-                            ⏮
-                        </button>
-
-
-                        <button
-                            class="play-main"
-                            id="playPause"
-                            aria-label="Play"
-                        >
-                            ▶
-                        </button>
-
-
-                        <button
-                            class="player-btn"
-                            id="nextTrack"
-                            aria-label="Next song"
-                        >
-                            ⏭
-                        </button>
-
+                        <button class="player-btn" id="previousTrack"
+                                aria-label="Previous song">⏮</button>
+                        <button class="play-main" id="playPause"
+                                aria-label="Play">▶</button>
+                        <button class="player-btn" id="nextTrack"
+                                aria-label="Next song">⏭</button>
                     </div>
 
                     <div class="volume-control">
-
-                        <span>
-                            🔊
-                        </span>
-
-                        <input
-                            type="range"
-                            id="volume"
-                            min="0"
-                            max="1"
-                            value=".8"
-                            step=".01"
-                        >
-
+                        <span>🔊</span>
+                        <input type="range" id="volume" min="0" max="1"
+                               value=".8" step=".01" aria-label="Volume">
                     </div>
-
                 </div>
 
-                <div
-                    class="song-list"
-                    id="songList"
-                ></div>
+                <div class="song-list" id="songList"></div>
 
-
-                <button
-                    class="btn gallery-bottom-button"
-                    id="musicBackBottom"
-                >
+                <button class="btn gallery-bottom-button" id="musicBackBottom">
                     Back to the last page
                 </button>
-
             </div>
-
         </section>
-
     </main>
 
-    <div
-        id="lightbox"
-        class="lightbox hidden"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Photo viewer"
-    >
+    <!-- Shared lightbox for photos and video -->
+    <div id="lightbox" class="lightbox hidden" role="dialog"
+         aria-modal="true" aria-label="Memory viewer">
+        <button class="lightbox-close" id="lightboxClose"
+                aria-label="Close memory">×</button>
 
-        <button
-            class="lightbox-close"
-            id="lightboxClose"
-            aria-label="Close photo"
-        >
-            ×
-        </button>
-
-
-        <button
-            class="lightbox-nav lightbox-prev"
-            id="lightboxPrev"
-            aria-label="Previous photo"
-        >
-            ‹
-        </button>
-
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev"
+                aria-label="Previous memory">‹</button>
 
         <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Memory">
 
-            <img
-                id="lightboxImage"
-                src=""
-                alt="Memory"
-            >
-
-            <div
-                class="lightbox-caption"
-                id="lightboxCaption"
-            ></div>
-
-            <video
-                id="lightboxVideo"
-                class="hidden"
-                controls
-                playsinline
-                preload="metadata"
-            >
+            <video id="lightboxVideo" class="hidden" controls
+                   playsinline preload="metadata">
                 Your browser does not support HTML video.
             </video>
 
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
         </div>
 
-
-        <button
-            class="lightbox-nav lightbox-next"
-            id="lightboxNext"
-            aria-label="Next photo"
-        >
-            ›
-        </button>
-
+        <button class="lightbox-nav lightbox-next" id="lightboxNext"
+                aria-label="Next memory">›</button>
     </div>
 
-    <audio
-        id="audioPlayer"
-        preload="metadata"
-    ></audio>
-
-
+    <audio id="audioPlayer" preload="metadata"></audio>
 </div>
 
-
 <script src="script.js"></script>
-
 </body>
-
 </html>
