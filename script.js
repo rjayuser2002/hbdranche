@@ -181,6 +181,7 @@ const letterScreen = $("#letterScreen");
 const closingScreen = $("#closingScreen");
 const memoriesScreen = $("#memoriesScreen");
 const musicScreen = $("#musicScreen");
+const poemScreen = $("#poemScreen");
 
 const letter = $("#letter");
 const bar = $("#bar");
@@ -192,6 +193,8 @@ const openButton = $("#open");
 const replayButton = $("#replay");
 const memoriesButton = $("#memoriesButton");
 const musicButton = $("#musicButton");
+const poemButton = $("#poemButton");
+const poemBack = $("#poemBack");
 const dots = [...document.querySelectorAll(".dot")];
 
 let page = 0;
@@ -341,6 +344,8 @@ replayButton.addEventListener("click", () => {
 function showClosing() {
     memoriesScreen.classList.add("hidden");
     musicScreen.classList.add("hidden");
+    poemScreen.classList.add("hidden");
+
     closingScreen.classList.remove("hidden");
     scrollToTop();
 }
@@ -348,6 +353,7 @@ function showClosing() {
 function showMemories() {
     closingScreen.classList.add("hidden");
     musicScreen.classList.add("hidden");
+    poemScreen.classList.add("hidden");
     memoriesScreen.classList.remove("hidden");
 
     if (!carouselBuilt) {
@@ -362,13 +368,27 @@ function showMemories() {
 function showMusic() {
     closingScreen.classList.add("hidden");
     memoriesScreen.classList.add("hidden");
+    poemScreen.classList.add("hidden");
     musicScreen.classList.remove("hidden");
+
+    scrollToTop();
+    burst(30);
+}
+
+function showPoem() {
+    closingScreen.classList.add("hidden");
+    memoriesScreen.classList.add("hidden");
+    musicScreen.classList.add("hidden");
+    poemScreen.classList.remove("hidden");
+
     scrollToTop();
     burst(30);
 }
 
 memoriesButton.addEventListener("click", showMemories);
 musicButton.addEventListener("click", showMusic);
+poemButton.addEventListener("click", showPoem);
+poemBack.addEventListener("click", showClosing);
 
 $("#memoryBack").addEventListener("click", showClosing);
 $("#memoryBackBottom").addEventListener("click", showClosing);
