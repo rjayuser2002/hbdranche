@@ -139,7 +139,7 @@ const memoryCaptions = [
     "I asked you for a favor—to come with me to look for and canvass laptops for my work, and we ended up grabbing some lunch together.",
 
     
-    "The very latest photo of us together. We grabbed some dinner at Mr. Sizzlers and talked about how our September went. By the way, I'm sorry to hear about what happened. Just know that I'm always all ears whenever you need someone to talk to.",
+    "We grabbed some dinner at Mr. Sizzlers and talked about how our September went. By the way, I'm sorry to hear about what happened. Just know that I'm always all ears whenever you need someone to talk to.",
 
     
     "Another dinner out at Cheesestick Country! Jeremy went home to Siquijor, and neither of us wanted to cook anyway. HAHA!",
